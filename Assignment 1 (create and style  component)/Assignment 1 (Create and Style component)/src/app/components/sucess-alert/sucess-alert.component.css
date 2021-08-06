@@ -1,0 +1,12 @@
+.box{
+    background-color:lightseagreen;
+    /* padding-top: 2rem;
+    padding-bottom: 2rem; */
+    padding: 2rem 4rem;
+    align-items: center;
+    border-radius: 2rem;
+    box-sizing: inherit;
+    box-sizing: 1rem;
+    margin: 2rem;
+    
+}
