@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <ol>
+        <li>Add A button which says 'Display Details'</li>
+        <li>Add a paragraph with any content of your choice (e.g. 'Secret Password = tuna')</li>
+        <li>Toggle the displaying of that paragraph with the button created in the first step</li>
+        <li>Log all button clicks in an array and output that array below the secret paragraph (maybe log a timestamp or simply an incrementing number)</li>
+        <li>Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color (ngClass)</li>
+      </ol>
+      <hr>
+      <button class="btn btn-primary" (click)=onToggleDetails()>Display Details</button>
+      <p *ngIf=secretPwd>Password is tuna</p>
+      <br>
+
+      <!-- uses an log array for the value -->
+      <div *ngFor="let itemDetail of log" 
+      [ngStyle]="{backgroundColor: itemDetail>=5 ? 'blue' : white}" 
+      [ngClass]="{'set-color':itemDetail>=5}">{{itemDetail}}</div>
+
+      <!-- use an index insted of value -->
+      <!-- <div *ngFor="let itemDetail of log ; let i = index" 
+      [ngStyle]="{backgroundColor: i>=4 ? 'blue' : white}" 
+      [ngClass]="{'set-color':i>=4}">{{itemDetail}}</div> -->
+
+
+    </div>
+  </div>
+</div>
